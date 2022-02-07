@@ -1,0 +1,19 @@
+footer {
+  background-color: rgb(53, 53, 53);
+  color: white;
+  padding: 7%;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer a {
+  color: white;
+}
+footer img {
+  width: 80px;
+}
+footer i {
+  font-size: 10px;
+  margin-right: 5px;
+}
