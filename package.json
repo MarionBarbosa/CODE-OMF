@@ -1,0 +1,19 @@
+{
+  "name": "code-omf",
+  "version": "1.0.0",
+  "description": "OC-project-3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./main.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarionBarbosa/OC-Project-3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarionBarbosa/OC-Project-3/issues"
+  },
+  "homepage": "https://github.com/MarionBarbosa/OC-Project-3#readme"
+}
