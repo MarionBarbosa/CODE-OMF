@@ -1,14 +1,8 @@
-a {
-  color: black;
-  text-decoration: none;
-}
-a:visited {
-  text-decoration: none;
-}
-main img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
+@font-face {
+  font-family: "Shrikhand";
+  src: url(Shrikhand/Shrikhand-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: "Roboto";
@@ -16,16 +10,156 @@ main img {
   font-weight: normal;
   font-style: normal;
 }
+* {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "Shrikhand";
   src: url(Shrikhand/Shrikhand-Regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Roboto";
+  src: url(Roboto/Roboto-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-  font-family: "Roboto", arial;
-}
-#bloc__page {
-  max-width: 390px;
+  max-width: 375px;
   margin: auto;
+  font-family: "Roboto";
 }
+
+img {
+  width: 200px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header img {
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+header .header--location {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  column-gap: 15px;
+  background-color: #eaeaea;
+  padding-top: 16px;
+  font-weight: bold;
+  width: 100%;
+  box-shadow: inset 0px 3px 2px #d5d5d5;
+}
+header .header--location p {
+  margin-top: 0;
+}
+header .header--location a {
+  color: #353535;
+}
+
+.main__introductionBloc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  padding: 40px 20px;
+  margin-bottom: 40px;
+}
+.main__introductionBloc h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 26px;
+  margin-top: 0;
+  padding: 0px 15px;
+}
+.main__introductionBloc p {
+  text-align: center;
+  font-size: 21px;
+  letter-spacing: -1px;
+  margin-top: 0;
+  color: #4d4d4d;
+  padding-bottom: 10px;
+}
+.main__introductionBloc button {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-image: linear-gradient(to top left, #9356dc, #ff79da);
+  padding: 20px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 5px 5px 8px #d5d5d5;
+  cursor: pointer;
+}
+
+.section__explanation {
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+  row-gap: 20px;
+}
+.section__explanation .button__explanation {
+  display: flex;
+}
+.section__explanation .button__explanation p {
+  position: relative;
+  top: 16px;
+  left: 11px;
+  background-color: #9356dc;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 3px 7px;
+}
+.section__explanation .button__explanation button {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  width: 100%;
+  background-color: #f6f6f6;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 5px 5px 8px #d5d5d5;
+  padding: 30px 30px;
+  border-radius: 20px;
+}
+.section__explanation .button__explanation i {
+  color: #7e7e7e;
+  font-size: 18px;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 7%;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer a {
+  color: white;
+}
+footer img {
+  width: 80px;
+}
+footer i {
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
