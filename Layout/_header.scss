@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .header--location {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    column-gap: 15px;
+    background-color: $color-header;
+    padding-top: 16px;
+    font-weight: bold;
+    width: 100%;
+    box-shadow: inset 0px 3px 2px $color-header-location-border;
+
+    p {
+      margin-top: 0;
+    }
+    a {
+      color: $color-header-location-text;
+    }
+  }
+}
