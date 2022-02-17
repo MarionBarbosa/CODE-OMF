@@ -7,7 +7,7 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
 
     <script
-      src="https://kit.fontawesome.com/af1cd2eb9e.js"
+      src="https://kit.fontawesome.com/b37443975c.js"
       crossorigin="anonymous"
     ></script>
 
@@ -28,38 +28,40 @@
       <div class="main__introductionBloc">
         <h1>Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <a href="#"><button>Explorer nos restaurants</button></a> 
+        <a href="#"><button class="introduction__button">Explorer nos restaurants</button></a> 
       </div>
 
       <section class="section__explanation">
         <h2>Fonctionnement</h2>
-        <div class="button__explanation">
+        <div class="button__list" >
           <p>1</p>
-          <button>            
+          <button class="button__list--basic">            
             <i class="fas fa-mobile-alt"></i>Choisissez un restaurant
           </button>
         </div>
-        <div class="button__explanation">
+        <div class="button__list">
           <p>2</p>
-          <button><i class="fas fa-list-ul"></i>Composez votre menu</button>
+          <button class="button__list--basic"><i class="fas fa-list-ul"></i>Composez votre menu</button>
         </div>
-        <div class="button__explanation">
+        <div class="button__list" >
           <p>3</p>
-          <button><i class="fas fa-store"></i>Dégustez au restaurant</button>
+          <button class="button__list--basic button__list--modified"><i class="fas fa-store"></i>Dégustez au restaurant</button>
         </div>
       </section>
-      <section>
+      <section class="section__restaurants">
         <h2>Restaurants</h2>
         <a href="/index_menu_laPaletteDuGout.html">
-          <div class="card">
+          <div class="card">            
             <img src="images/LaPaletteDuGout.jpg" />
-            <p>Nouveau</p>
-            <div class="title-menu">
-              <h3>La palette de goût</h3>
-              <p>Ménilmontant</p>
-              <div>
+            <div class="card--tag">Nouveau</div>
+            <div class="card--textBox">
+              <div class="card--text">
+                <h3>La palette de goût</h3>
+                <p>Ménilmontant</p>
+              </div>
+              <div class="card--icon">
                 <i class="far fa-heart"></i>
-                <i class="fas fa-heart showHover"></i>
+                          
               </div>
             </div>
           </div>
@@ -67,34 +69,46 @@
         <a href="index_menu_laNoteEnchantee.html">
           <div class="card">
             <img src="images/LaNoteEnchantee.jpg" />
-            <p>Nouveau</p>
-            <div class="title-menu">
-              <h3>La note enchantée</h3>
-              <p>Charonne</p>
-              <i class="far fa-heart"></i>
-              <i class="fas fa-heart"></i>
+            <p class="card--tag">Nouveau</p>
+            <div class="card--textBox">
+              <div class="card--text">
+                <h3>La note enchantée</h3>
+                <p>Charonne</p>
+              </div>
+              <div class="card--icon">
+                <i class="far fa-heart"></i>
+                <i class="fa fa-heart"></i>
+              </div>
             </div>
           </div>
         </a>
         <a href="index_menu_aLaFrancaise.html">
           <div class="card">
             <img src="images/ALaFrancaise.jpg" />
-            <div class="title-menu">
-              <h3>À la française</h3>
-              <p>Cité Rouge</p>
-              <i class="far fa-heart"></i>
-              <i class="fas fa-heart"></i>
-            </div>
+            <div class="card--textBox">
+              <div class="card--text">
+                <h3>À la française</h3>
+                <p>Cité Rouge</p>
+              </div>  
+              <div class="card--icon">
+                <i class="far fa-heart"></i>
+                <i class="fa fa-heart"></i>
+              </div>
+           </div>
           </div>
         </a>
         <a href="index_menu_leDelicesDesSens.html">
           <div class="card">
             <img src="images/LeDeliceDesSens.jpg" />
-            <div class="title-menu">
-              <h3>Le délice des sens</h3>
-              <p>Folie-Méricourt</p>
-              <i class="far fa-heart"></i>
-              <i class="fas fa-heart"></i>
+            <div class="card--textBox">
+              <div class="card--text">
+                <h3>Le délice des sens</h3>
+                <p>Folie-Méricourt</p>
+              </div>
+                <div class="card--icon">
+                  <i class="far fa-heart"></i>
+                  <i class="fa fa-heart"></i>
+              </div>
             </div>
           </div>
         </a>
@@ -104,12 +118,22 @@
       <img src="images/ohmyfood.png" alt="logo" />
       <ul>
         <li>
-          <a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
+          <a href="#">
+            <div class="footer--text">
+              <i class="fas fa-utensils"></i>
+              <p>Proposer un restaurant</p>
+            </div>
+          </a>
         </li>
         <li>
-          <a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
+          <a href="#">
+            <div class="footer--text">
+              <i class="fas fa-hands-helping fa-rotate-by" ></i>
+              <p>Devenir partenaire</p>
+            </div>
+          </a>
         </li>
-        <li><a href="#">Mentions legales</a></li>
+        <li><a href="#">Mentions légales</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
       <div></div>

@@ -1,8 +1,9 @@
-@import "./utils/variables";
-@import "./Utils/mixins";
-@import "./Base/base";
-@import "./Composants/links.scss";
+@import "./utils/variables.scss";
+@import "./Utils/mixins.scss";
+@import "./Base/base.scss";
+@import "./Components/links.scss";
 @import "./Layout/header";
-@import "./Layout/main__introduction";
-@import "./Layout/section__explanation";
-@import "./Layout/footer";
+@import "./Layout/main__introduction.scss";
+@import "./Layout/section__explanation.scss";
+@import "./Layout/section__restaurants.scss";
+@import "./Layout/footer.scss";

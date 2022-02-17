@@ -1,15 +1,3 @@
-@font-face {
-  font-family: "Shrikhand";
-  src: url(Shrikhand/Shrikhand-Regular.ttf);
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url(Roboto/Roboto-Regular.ttf);
-  font-weight: normal;
-  font-style: normal;
-}
 * {
   box-sizing: border-box;
 }
@@ -76,7 +64,7 @@ header .header--location a {
   justify-content: space-between;
   background-color: #f6f6f6;
   padding: 40px 20px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 .main__introductionBloc h1 {
   text-align: center;
@@ -93,11 +81,11 @@ header .header--location a {
   color: #4d4d4d;
   padding-bottom: 10px;
 }
-.main__introductionBloc button {
+.main__introductionBloc .introduction__button {
   font-size: 16px;
   font-weight: bold;
   color: white;
-  background-image: linear-gradient(to top left, #9356dc, #ff79da);
+  background: linear-gradient(to top left, #9356dc, #ff79da);
   padding: 20px;
   border-radius: 50px;
   border: none;
@@ -111,20 +99,25 @@ header .header--location a {
   padding: 3%;
   row-gap: 20px;
 }
-.section__explanation .button__explanation {
+.section__explanation h2 {
+  padding-left: 10px;
+}
+
+.button__list {
   display: flex;
 }
-.section__explanation .button__explanation p {
+.button__list p {
   position: relative;
-  top: 16px;
+  top: 18px;
   left: 11px;
   background-color: #9356dc;
   color: white;
   font-size: 12px;
   border-radius: 50%;
   padding: 3px 7px;
+  height: min-content;
 }
-.section__explanation .button__explanation button {
+.button__list--basic {
   display: flex;
   align-items: center;
   column-gap: 20px;
@@ -137,29 +130,117 @@ header .header--location a {
   padding: 30px 30px;
   border-radius: 20px;
 }
-.section__explanation .button__explanation i {
+.button__list--basic i {
   color: #7e7e7e;
   font-size: 18px;
+}
+.button__list--modified {
+  background-color: #f5edff;
+}
+.button__list--modified i {
+  color: #9356dc;
+}
+
+.section__restaurants {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  margin-top: 30px;
+  padding: 60px 20px;
+}
+.section__restaurants h2 {
+  margin-bottom: 10px;
+}
+.section__restaurants .card {
+  background-color: white;
+  position: relative;
+  box-shadow: 5px 5px 8px #d5d5d5;
+  height: 255px;
+  width: 335px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.section__restaurants .card img {
+  height: 175px;
+  width: 100%;
+  object-fit: cover;
+}
+.section__restaurants .card--tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 85px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: #008766;
+  background-color: #99e2d0;
+  position: absolute;
+  top: 11px;
+  right: 13px;
+  border-radius: 2px;
+}
+.section__restaurants .card--textBox {
+  display: flex;
+  justify-content: space-between;
+}
+.section__restaurants .card--text {
+  margin: 5px 0px;
+}
+.section__restaurants .card--text h3,
+.section__restaurants .card--text p {
+  margin: 5px 15px;
+}
+.section__restaurants .card--text p {
+  font-size: 17px;
+}
+.section__restaurants .card i {
+  font-size: 25px;
+  position: absolute;
+  bottom: 30px;
+  right: 25px;
+}
+.section__restaurants .card i:hover {
+  background-image: linear-gradient(to bottom left, #9356dc, #ff79da);
+  background-clip: text;
+  font-weight: bold;
+  color: transparent;
 }
 
 footer {
   background-color: #353535;
-  color: white;
   padding: 7%;
+}
+footer img {
+  width: 100px;
+  height: auto;
+  filter: invert(100%);
 }
 footer ul {
   list-style-type: none;
   padding: 0;
 }
-footer a {
+footer ul li {
+  margin-bottom: 10px;
+}
+footer ul li a {
   color: white;
 }
-footer img {
-  width: 80px;
+footer .footer--text {
+  display: flex;
+  align-items: baseline;
+  column-gap: 15px;
 }
-footer i {
+footer .footer--text p {
+  margin: 0;
+}
+footer .fa-utensils {
+  font-size: 14px;
+}
+footer .fa-hands-helping {
   font-size: 10px;
-  margin-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
