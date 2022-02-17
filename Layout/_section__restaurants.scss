@@ -1,0 +1,73 @@
+.section__restaurants {
+  background-color: $color-background;
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  margin-top: 30px;
+  padding: 60px 20px;
+  h2 {
+    margin-bottom: 10px;
+  }
+  .card {
+    background-color: white;
+    position: relative;
+    @include button--box-shadow;
+    height: 255px;
+    width: 335px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    img {
+      height: 175px;
+      width: 100%;
+      object-fit: cover;
+    }
+    &--tag {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+      width: 85px;
+      margin: 0;
+      font-size: 15px;
+      font-weight: bold;
+      color: $color-tag-text;
+      background-color: $color-tertiary;
+      position: absolute;
+      top: 11px;
+      right: 13px;
+      border-radius: 2px;
+    }
+    &--textBox {
+      display: flex;
+      justify-content: space-between;
+    }
+    &--text {
+      margin: 5px 0px;
+      h3,
+      p {
+        margin: 5px 15px;
+      }
+      p {
+        font-size: 17px;
+      }
+    }
+    i {
+      font-size: 25px;
+      position: absolute;
+      bottom: 30px;
+      right: 25px;
+
+      &:hover {
+        background-image: linear-gradient(
+          to bottom left,
+          $color-primary,
+          $color-secondary
+        );
+        background-clip: text;
+        font-weight: bold;
+        color: transparent;
+      }
+    }
+  }
+}
