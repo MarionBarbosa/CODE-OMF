@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "Roboto";
 }
 
 @font-face {
@@ -20,10 +21,6 @@ body {
   font-family: "Roboto";
 }
 
-img {
-  width: 200px;
-}
-
 a {
   color: black;
   text-decoration: none;
@@ -40,21 +37,35 @@ header img {
   margin-bottom: 15px;
 }
 header .header--location {
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   column-gap: 15px;
   background-color: #eaeaea;
-  padding-top: 16px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   font-weight: bold;
   width: 100%;
   box-shadow: inset 0px 3px 2px #d5d5d5;
 }
-header .header--location p {
-  margin-top: 0;
+header .header--location i {
+  position: relative;
+  left: 30px;
 }
-header .header--location a {
+header .header--location input {
+  border: none;
+  background-color: #eaeaea;
+  font-size: 15px;
+  font-weight: bold;
+  outline: none;
+}
+header .header--location input::placeholder {
   color: #353535;
+  text-align: center;
+}
+header .header--location input:focus::placeholder {
+  color: transparent;
 }
 
 .main__introductionBloc {
@@ -82,15 +93,15 @@ header .header--location a {
   padding-bottom: 10px;
 }
 .main__introductionBloc .introduction__button {
-  font-size: 16px;
-  font-weight: bold;
   color: white;
   background: linear-gradient(to top left, #9356dc, #ff79da);
-  padding: 20px;
   border-radius: 50px;
   border: none;
   box-shadow: 5px 5px 8px #d5d5d5;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px;
 }
 
 .section__explanation {
@@ -134,10 +145,10 @@ header .header--location a {
   color: #7e7e7e;
   font-size: 18px;
 }
-.button__list--modified {
+.button__list--basic:hover {
   background-color: #f5edff;
 }
-.button__list--modified i {
+.button__list--basic:hover i {
   color: #9356dc;
 }
 
@@ -207,6 +218,153 @@ header .header--location a {
   background-clip: text;
   font-weight: bold;
   color: transparent;
+}
+
+.header__menu {
+  position: relative;
+  top: 45px;
+  right: 150px;
+  font-size: 20px;
+}
+
+#banner {
+  height: 260px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.main__menu {
+  position: relative;
+  top: -40px;
+  background-color: #f6f6f6;
+  border-radius: 30px 30px 0px 0px;
+  padding: 40px 13px 80px 13px;
+  margin: 0;
+}
+.main__menu h1 {
+  font-family: "Shrikhand";
+  font-weight: normal;
+  margin: 0;
+}
+.main__menu heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.main__menu heading i {
+  padding-right: 23px;
+}
+.main__menu heading i:hover {
+  background-image: linear-gradient(to bottom left, #9356dc, #ff79da);
+  background-clip: text;
+  font-weight: bold;
+  color: transparent;
+}
+.main__menu h1,
+.main__menu i {
+  font-size: 27px;
+}
+.main__menu h2 {
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  position: relative;
+  height: 30px;
+}
+.main__menu h2:after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: #99e2d0;
+  position: absolute;
+  bottom: -1px;
+  left: 7px;
+}
+.main__menu h1,
+.main__menu h2 {
+  padding-left: 7px;
+}
+.main__menu h3,
+.main__menu .price {
+  font-weight: bold;
+}
+.main__menu h2,
+.main__menu .price,
+.main__menu p {
+  color: #353535;
+}
+.main__menu .price,
+.main__menu p {
+  padding-bottom: 10px;
+}
+.main__menu .price {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+.main__menu--choice {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 70px;
+  margin-bottom: 13px;
+  padding: 10px 0px 0px 10px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 8px #d5d5d5;
+}
+.main__menu--choice h3,
+.main__menu--choice p {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.main__menu--choice h3 {
+  font-size: 18px;
+}
+.main__menu--choice p {
+  font-size: 15px;
+}
+.main__menu--choice .rotating-icon {
+  display: none;
+}
+.main__menu--choice:hover {
+  cursor: pointer;
+}
+.main__menu--choice:hover .rotating-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 60px;
+  background-color: #99e2d0;
+  border-radius: 0px 15px 15px 0px;
+}
+.main__menu--choice:hover i {
+  color: white;
+}
+.main__menu--choice:hover .main__menu--text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.main__menu .button__menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.main__menu .button__menu button {
+  color: white;
+  background: linear-gradient(to top left, #9356dc, #ff79da);
+  border-radius: 50px;
+  border: none;
+  box-shadow: 5px 5px 8px #d5d5d5;
+  cursor: pointer;
+  padding: 15px 55px;
+  font-size: 15px;
 }
 
 footer {
