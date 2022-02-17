@@ -3,34 +3,44 @@
   flex-direction: column;
   padding: 3%;
   row-gap: 20px;
-  .button__explanation {
+  h2 {
+    padding-left: 10px;
+  }
+}
+.button__list {
+  display: flex;
+  p {
+    position: relative;
+    top: 18px;
+    left: 11px;
+    background-color: $color-primary;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 3px 7px;
+    height: min-content;
+  }
+  &--basic {
     display: flex;
-    p {
-      position: relative;
-      top: 16px;
-      left: 11px;
-      background-color: $color-primary;
-      color: white;
-      font-size: 12px;
-      border-radius: 50%;
-      padding: 3px 7px;
-    }
-    button {
-      display: flex;
-      align-items: center;
-      column-gap: 20px;
-      width: 100%;
-      background-color: $color-background;
-      border: none;
-      font-weight: bold;
-      font-size: 16px;
-      @include button--box-shadow;
-      padding: 30px 30px;
-      border-radius: 20px;
-    }
+    align-items: center;
+    column-gap: 20px;
+    width: 100%;
+    background-color: $color-background;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    @include button--box-shadow;
+    padding: 30px 30px;
+    border-radius: 20px;
     i {
       color: $color-icon-explanation;
       font-size: 18px;
+    }
+  }
+  &--modified {
+    background-color: $color-button-fonctionnenment;
+    i {
+      color: $color-primary;
     }
   }
 }
