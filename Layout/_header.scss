@@ -8,21 +8,34 @@ header {
     margin-bottom: 15px;
   }
   .header--location {
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     column-gap: 15px;
     background-color: $color-header;
-    padding-top: 16px;
+    padding-top: 9px;
+    padding-bottom: 9px;
     font-weight: bold;
     width: 100%;
     box-shadow: inset 0px 3px 2px $color-header-location-border;
-
-    p {
-      margin-top: 0;
+    i {
+      position: relative;
+      left: 30px;
     }
-    a {
+    input {
+      border: none;
+      background-color: $color-header;
+      font-size: 15px;
+      font-weight: bold;
+      outline: none;
+    }
+    input::placeholder {
       color: $color-header-location-text;
+      text-align: center;
+    }
+    input:focus::placeholder {
+      color: transparent;
     }
   }
 }

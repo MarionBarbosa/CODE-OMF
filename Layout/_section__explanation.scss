@@ -36,11 +36,11 @@
       color: $color-icon-explanation;
       font-size: 18px;
     }
-  }
-  &--modified {
-    background-color: $color-button-fonctionnenment;
-    i {
-      color: $color-primary;
+    &:hover {
+      background-color: $color-button-fonctionnenment;
+      i {
+        color: $color-primary;
+      }
     }
   }
 }

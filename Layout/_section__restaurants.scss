@@ -59,14 +59,7 @@
       right: 25px;
 
       &:hover {
-        background-image: linear-gradient(
-          to bottom left,
-          $color-primary,
-          $color-secondary
-        );
-        background-clip: text;
-        font-weight: bold;
-        color: transparent;
+        @include like-icon;
       }
     }
   }
