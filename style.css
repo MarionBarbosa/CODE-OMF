@@ -5,13 +5,13 @@
 
 @font-face {
   font-family: "Shrikhand";
-  src: url(Shrikhand/Shrikhand-Regular.ttf);
+  src: url(../Shrikhand/Shrikhand-Regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto";
-  src: url(Roboto/Roboto-Regular.ttf);
+  src: url(../Roboto/Roboto-Regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
@@ -26,21 +26,17 @@ a {
   text-decoration: none;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-header img {
+.header__main img {
+  display: block;
   width: 50%;
   margin-top: 20px;
   margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
-header .header--location {
-  position: relative;
+.header__main .header--location {
   display: flex;
   justify-content: center;
-  align-items: center;
   column-gap: 15px;
   background-color: #eaeaea;
   padding-top: 9px;
@@ -49,22 +45,18 @@ header .header--location {
   width: 100%;
   box-shadow: inset 0px 3px 2px #d5d5d5;
 }
-header .header--location i {
-  position: relative;
-  left: 30px;
-}
-header .header--location input {
+.header__main .header--location--input {
   border: none;
   background-color: #eaeaea;
   font-size: 15px;
   font-weight: bold;
   outline: none;
+  width: 30%;
 }
-header .header--location input::placeholder {
+.header__main .header--location input::placeholder {
   color: #353535;
-  text-align: center;
 }
-header .header--location input:focus::placeholder {
+.header__main .header--location input:focus::placeholder {
   color: transparent;
 }
 
@@ -78,17 +70,18 @@ header .header--location input:focus::placeholder {
   margin-bottom: 25px;
 }
 .main__introductionBloc h1 {
-  text-align: center;
   font-weight: bold;
   font-size: 26px;
-  margin-top: 0;
   padding: 0px 15px;
 }
+.main__introductionBloc h1,
 .main__introductionBloc p {
   text-align: center;
+  margin-top: 0;
+}
+.main__introductionBloc p {
   font-size: 21px;
   letter-spacing: -1px;
-  margin-top: 0;
   color: #4d4d4d;
   padding-bottom: 10px;
 }
@@ -220,11 +213,20 @@ header .header--location input:focus::placeholder {
   color: transparent;
 }
 
-.header__menu {
+.header__menu img {
+  display: block;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header__menu--icon {
   position: relative;
-  top: 45px;
-  right: 150px;
+  top: 50px;
+  left: 25px;
   font-size: 20px;
+  color: #353535;
 }
 
 #banner {
@@ -232,7 +234,6 @@ header .header--location input:focus::placeholder {
   width: 100%;
   padding: 0;
   margin: 0;
-  overflow: hidden;
 }
 
 .main__menu {
@@ -304,7 +305,8 @@ header .header--location input:focus::placeholder {
 }
 .main__menu .price {
   padding-left: 13px;
-  padding-right: 13px;
+  padding-right: 10px;
+  flex: 1 1 20%;
 }
 .main__menu--choice {
   display: flex;
@@ -339,9 +341,9 @@ header .header--location input:focus::placeholder {
   justify-content: center;
   align-items: center;
   height: 70px;
-  width: 60px;
   background-color: #99e2d0;
   border-radius: 0px 15px 15px 0px;
+  flex: 1 1 20%;
 }
 .main__menu--choice:hover i {
   color: white;
@@ -350,6 +352,13 @@ header .header--location input:focus::placeholder {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  flex: 1 1 65%;
+}
+.main__menu--choice:hover .price {
+  flex: 1 1 15%;
+}
+.main__menu--text {
+  flex: 1 1 80%;
 }
 .main__menu .button__menu {
   display: flex;

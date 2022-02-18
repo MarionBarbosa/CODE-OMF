@@ -4,7 +4,8 @@
   "description": "OC-project-3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./main.scss:./style.css"
+    "sass": "sass --watch ./main.scss:./style.css",
+    "prefix": "postcss ./style.css --use autoprefixer -d ./prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,7 @@
   },
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/MarionBarbosa/OC-Project-3/issues"
   },
