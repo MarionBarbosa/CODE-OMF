@@ -8,6 +8,13 @@
   border: none;
   @include button--box-shadow;
   cursor: pointer;
+  &:hover {
+    background: linear-gradient(
+      to top left,
+      lighten($color-primary, 8%),
+      lighten($color-secondary, 8%)
+    );
+  }
 }
 @mixin like-icon {
   background-image: linear-gradient(
