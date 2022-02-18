@@ -1,5 +1,5 @@
-@mixin button--box-shadow {
-  box-shadow: 5px 5px 8px $color-header-location-border;
+@mixin button--box-shadow($color: $color-header-location-border) {
+  box-shadow: 5px 5px 8px $color;
 }
 @mixin button-gradient {
   color: white;
@@ -18,4 +18,14 @@
   background-clip: text;
   font-weight: bold;
   color: transparent;
+}
+@mixin header__main {
+  img {
+    display: block;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
