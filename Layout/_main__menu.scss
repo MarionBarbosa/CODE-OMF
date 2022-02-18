@@ -66,7 +66,8 @@
   }
   .price {
     padding-left: 13px;
-    padding-right: 13px;
+    padding-right: 10px;
+    flex: 1 1 20%;
   }
   &--choice {
     display: flex;
@@ -92,6 +93,7 @@
     .rotating-icon {
       display: none;
     }
+
     &:hover {
       cursor: pointer;
       .rotating-icon {
@@ -99,9 +101,9 @@
         justify-content: center;
         align-items: center;
         height: 70px;
-        width: 60px;
         background-color: $color-tertiary;
         border-radius: 0px 15px 15px 0px;
+        flex: 1 1 20%;
       }
       i {
         color: white;
@@ -110,8 +112,15 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        flex: 1 1 65%;
+      }
+      .price {
+        flex: 1 1 15%;
       }
     }
+  }
+  &--text {
+    flex: 1 1 80%;
   }
   .button__menu {
     display: flex;

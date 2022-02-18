@@ -1,17 +1,8 @@
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  img {
-    width: 50%;
-    margin-top: 20px;
-    margin-bottom: 15px;
-  }
+.header__main {
+  @include header__main;
   .header--location {
-    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
     column-gap: 15px;
     background-color: $color-header;
     padding-top: 9px;
@@ -19,20 +10,17 @@ header {
     font-weight: bold;
     width: 100%;
     box-shadow: inset 0px 3px 2px $color-header-location-border;
-    i {
-      position: relative;
-      left: 30px;
-    }
-    input {
+
+    &--input {
       border: none;
       background-color: $color-header;
       font-size: 15px;
       font-weight: bold;
       outline: none;
+      width: 30%;
     }
     input::placeholder {
       color: $color-header-location-text;
-      text-align: center;
     }
     input:focus::placeholder {
       color: transparent;
