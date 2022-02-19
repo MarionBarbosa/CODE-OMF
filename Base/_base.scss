@@ -15,7 +15,13 @@
   font-style: normal;
 }
 body {
-  max-width: 375px;
+  width: 375px;
   margin: auto;
   font-family: "Roboto";
+  @include tablet-only {
+    width: auto;
+  }
+  @include desktop-only {
+    width: auto;
+  }
 }
