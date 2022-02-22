@@ -1,19 +1,25 @@
 .main__menu {
-  position: relative;
-  top: -40px;
+  width: 100%;
   background-color: $color-background;
   border-radius: 30px 30px 0px 0px;
   padding: 40px 13px 80px 13px;
   margin: 0;
+  margin-top: -30px;
+
   h1 {
     font-family: "Shrikhand";
     font-weight: normal;
     margin: 0;
   }
-  heading {
+  .heading {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    @include desktop-only {
+      justify-content: center;
+      column-gap: 50px;
+    }
+
     i {
       padding-right: 23px;
       &:hover {
@@ -21,6 +27,15 @@
       }
     }
   }
+  &--list {
+    @include desktop-only {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      column-gap: 10px;
+    }
+  }
+
   h1,
   i {
     font-size: 27px;
@@ -66,19 +81,31 @@
   }
   .price {
     padding-left: 13px;
-    padding-right: 10px;
-    flex: 1 1 20%;
+    padding-right: 20px;
+  }
+  .starters,
+  .mains,
+  .deserts {
+    @include desktop-only {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 30%;
+    }
   }
   &--choice {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    position: relative;
     height: 70px;
     margin-bottom: 13px;
     padding: 10px 0px 0px 10px;
     background-color: white;
     border-radius: 20px;
+    overflow: hidden;
+
     @include button--box-shadow;
+
     h3,
     p {
       margin-top: 3px;
@@ -88,25 +115,36 @@
       font-size: 18px;
     }
     p {
-      font-size: 15px;
-    }
-    .rotating-icon {
-      display: none;
+      font-size: 14px;
     }
 
-    &:hover {
-      cursor: pointer;
+    .moveToLeft {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      left: 71px;
+      flex: 1 1 20%;
       .rotating-icon {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 70px;
+        width: 70px;
         background-color: $color-tertiary;
         border-radius: 0px 15px 15px 0px;
-        flex: 1 1 20%;
+        i {
+          color: white;
+        }
       }
-      i {
-        color: white;
+    }
+    &:hover {
+      cursor: pointer;
+      .moveToLeft {
+        animation: moveToLeft 0.5s ease-in-out forwards;
+      }
+      .rotating-icon i{
+        animation: rotateIcon 0.5s ease-in forwards;
       }
       .main__menu--text {
         overflow: hidden;
@@ -114,12 +152,12 @@
         text-overflow: ellipsis;
         flex: 1 1 65%;
       }
-      .price {
-        flex: 1 1 15%;
-      }
     }
   }
   &--text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex: 1 1 80%;
   }
   .button__menu {

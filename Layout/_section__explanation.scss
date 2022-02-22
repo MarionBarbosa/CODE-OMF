@@ -7,6 +7,19 @@
     padding-left: 10px;
   }
 }
+.button__explanation {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  @include desktop-only {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include tablet-only {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .button__list {
   display: flex;
   p {
@@ -41,6 +54,8 @@
       i {
         color: $color-primary;
       }
+    }
+    @include tablet-only {
     }
   }
 }
