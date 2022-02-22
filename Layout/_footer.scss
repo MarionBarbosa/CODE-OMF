@@ -1,6 +1,7 @@
 footer {
   background-color: $color-footer;
   padding: 7%;
+
   img {
     width: 100px;
     height: auto;
@@ -10,6 +11,10 @@ footer {
   ul {
     list-style-type: none;
     padding: 0;
+    @include desktop-only {
+      display: flex;
+      column-gap: 100px;
+    }
     li {
       margin-bottom: 10px;
       a {
