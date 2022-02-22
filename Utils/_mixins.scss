@@ -30,7 +30,7 @@
   font-weight: bold;
   color: transparent;
 }
-@mixin header__main {
+@mixin header__logo {
   img {
     display: block;
     width: 50%;
@@ -38,6 +38,12 @@
     margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
+    @include tablet-only {
+      width: 30%;
+    }
+    @include desktop-only {
+      width: 30%;
+    }
   }
 }
 @mixin tablet-only {
