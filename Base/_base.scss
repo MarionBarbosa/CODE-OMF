@@ -15,7 +15,7 @@
   font-style: normal;
 }
 body {
-  width: 375px;
+  min-width: 375px;
   margin: auto;
   font-family: "Roboto";
   @include tablet-only {
