@@ -1,5 +1,5 @@
 .header__menu {
-  @include header__main;
+  @include header__logo;
   &--icon {
     position: relative;
     top: 50px;

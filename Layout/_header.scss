@@ -1,5 +1,5 @@
 .header__main {
-  @include header__main;
+  @include header__logo;
   .header--location {
     display: flex;
     justify-content: center;
@@ -17,7 +17,6 @@
       font-size: 15px;
       font-weight: bold;
       outline: none;
-      width: 30%;
     }
     input::placeholder {
       color: $color-header-location-text;
