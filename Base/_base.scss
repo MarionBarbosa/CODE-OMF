@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial;
 }
 @font-face {
   font-family: "Shrikhand";
@@ -16,8 +16,8 @@
 }
 body {
   min-width: 375px;
+  max-width: 1201px;
   margin: auto;
-  font-family: "Roboto";
   @include tablet-only {
     width: auto;
   }

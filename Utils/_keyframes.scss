@@ -1,16 +1,47 @@
-@keyframes moveToLeft {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(-69px);
-  }
-}
 @keyframes rotateIcon {
   0% {
     transform: rotate(90deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes translateMenu {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes loadingPage{
+  0%{
+    opacity: 1;
+  }
+  99%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+
+}
+@keyframes loadingSpinner {
+  0% {
+    transform: rotate(720deg);
+   
+  }
+  90% {
+    
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0); 
+   
   }
 }

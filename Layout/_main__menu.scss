@@ -22,6 +22,7 @@
 
     i {
       padding-right: 23px;
+
       &:hover {
         @include like-icon;
       }
@@ -75,13 +76,14 @@
   p {
     color: $color-header-location-text;
   }
-  .price,
-  p {
-    padding-bottom: 10px;
+  .starters {
+    animation: translateMenu 2s ease-in-out forwards;
   }
-  .price {
-    padding-left: 13px;
-    padding-right: 20px;
+  .mains{
+    animation: translateMenu 2s 0.3s ease-in-out forwards;
+  }
+  .deserts{
+    animation: translateMenu 2s 0.6s ease-in-out forwards;
   }
   .starters,
   .mains,
@@ -96,70 +98,68 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    position: relative;
     height: 70px;
+    background-color: white;
+    @include button--box-shadow;
+    border-radius: 20px;
     margin-bottom: 13px;
     padding: 10px 0px 0px 10px;
-    background-color: white;
-    border-radius: 20px;
     overflow: hidden;
 
-    @include button--box-shadow;
-
     h3,
-    p {
-      margin-top: 3px;
-      margin-bottom: 3px;
+    p,
+    .price {
+      margin: 0;
+      padding: 0;
     }
-    h3 {
-      font-size: 18px;
+    .price {
+      margin-bottom: 10px;
+      margin-right: -50px;
+      transform: translateX(0);
     }
-    p {
-      font-size: 14px;
-    }
-
-    .moveToLeft {
-      position: relative;
+    .rotating-icon {
       display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-      left: 71px;
-      flex: 1 1 20%;
-      .rotating-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 70px;
-        width: 70px;
-        background-color: $color-tertiary;
-        border-radius: 0px 15px 15px 0px;
-        i {
-          color: white;
-        }
+      justify-content: center;
+      align-items: center;
+      height: 70px;
+      width: 23%;
+      margin-left: 2%;
+      transform: translateX(100px);
+      background-color: $color-tertiary;
+      i {
+        color: white;
       }
     }
     &:hover {
-      cursor: pointer;
-      .moveToLeft {
-        animation: moveToLeft 0.5s ease-in-out forwards;
+      .rotating-icon {
+        @include moveToLeft;
+        i {
+          animation: rotateIcon 1s linear forwards;
+        }
       }
-      .rotating-icon i{
-        animation: rotateIcon 0.5s ease-in forwards;
-      }
-      .main__menu--text {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        flex: 1 1 65%;
+      .price {
+        transition: transform 0.6s ease-in-out;
+        transform: translateX(-50px);
       }
     }
   }
   &--text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1 1 80%;
+    @include textEllipsis;
+    width: 100%;
+    margin-bottom: 10px;
+    h3,
+    p {
+      @include textEllipsis;
+    }
+    h3 {
+      font-weight: 18px;
+      margin-bottom: 5px;
+    }
+    p {
+      font-weight: 14px;
+    }
   }
+
   .button__menu {
     display: flex;
     justify-content: center;

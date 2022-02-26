@@ -1,7 +1,7 @@
 {
   "name": "code-omf",
   "version": "1.0.0",
-  "description": "OC-project-3",
+  "description": "CODE-OMF",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./main.scss:./style.css",
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MarionBarbosa/OC-Project-3.git"
+    "url": "git+https://github.com/MarionBarbosa/CODE-OMF.git"
   },
   "author": "",
   "license": "ISC",
   "browserslist": "last 4 versions",
   "bugs": {
-    "url": "https://github.com/MarionBarbosa/OC-Project-3/issues"
+    "url": "https://github.com/MarionBarbosa/CODE-OMF/issues"
   },
-  "homepage": "https://github.com/MarionBarbosa/OC-Project-3#readme"
+  "homepage": "https://github.com/MarionBarbosa/CODE-OMF#readme"
 }
