@@ -1,11 +1,39 @@
-@keyframes rotateIcon {
+@keyframes loadingPage {
   0% {
-    transform: rotate(90deg);
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
   }
   100% {
-    transform: rotate(360deg);
+    opacity: 0;
+    z-index: -1;
   }
 }
+@keyframes loadingSpinner {
+  0% {
+    transform: rotate(720deg);
+  }
+  90% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes likeIcon {
+  0% {
+    transform: scale(0);
+    opacity: 1;    
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    
+  }
+}
+
 @keyframes translateMenu {
   0% {
     transform: translateY(20%);
@@ -19,29 +47,11 @@
     opacity: 1;
   }
 }
-@keyframes loadingPage{
-  0%{
-    opacity: 1;
-  }
-  99%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
-
-}
-@keyframes loadingSpinner {
+@keyframes rotateIcon {
   0% {
-    transform: rotate(720deg);
-   
-  }
-  90% {
-    
-    transform: rotate(0);
+    transform: rotate(90deg);
   }
   100% {
-    transform: rotate(0); 
-   
+    transform: rotate(360deg);
   }
 }

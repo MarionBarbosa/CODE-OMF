@@ -20,14 +20,15 @@
     @include button--box-shadow-darken;
   }
 }
-@mixin like-icon {
+
+@mixin like-icon-color {
   background-image: linear-gradient(
     to bottom left,
     $color-primary,
     $color-secondary
   );
   background-clip: text;
-  font-weight: bold;
+
   color: transparent;
 }
 @mixin header__logo {
@@ -57,7 +58,7 @@
   }
 }
 @mixin moveToLeft {
-  transform: translateX(0px);
+  transform: translateX(0);
   transition: transform 0.6s ease-in-out;
 }
 @mixin textEllipsis {

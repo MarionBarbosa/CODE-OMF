@@ -81,14 +81,27 @@
           font-size: 17px;
         }
       }
-      i {
-        font-size: 25px;
-        position: absolute;
-        bottom: 30px;
-        right: 25px;
-
+      .like-icon {
         &:hover {
-          @include like-icon;
+          .like-icon--basic {
+            @include like-icon-color;
+          }
+          .like-icon--slide {
+            animation: likeIcon 0.4s linear forwards;
+          }
+        }
+        &--basic,
+        &--slide {
+          font-size: 25px;
+          position: absolute;
+          bottom: 30px;
+          right: 25px;
+        }
+
+        &--slide {
+          opacity: 0;
+          @include like-icon-color;
+          font-weight: bold;
         }
       }
     }

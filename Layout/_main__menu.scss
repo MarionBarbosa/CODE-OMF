@@ -13,18 +13,34 @@
   }
   .heading {
     display: flex;
-    justify-content: space-between;
+
     align-items: baseline;
     @include desktop-only {
       justify-content: center;
       column-gap: 50px;
     }
-
-    i {
-      padding-right: 23px;
-
+    .like-icon {
+      position: relative;
       &:hover {
-        @include like-icon;
+        .like-icon--basic {
+          @include like-icon-color;
+        }
+        .like-icon--slide {
+          animation: likeIcon 0.4s linear forwards;
+        }
+      }
+      &--basic,
+      &--slide {
+        position: absolute;
+        font-size: 25px;
+        left: 185px;
+        top: -20px;
+      }
+
+      &--slide {
+        opacity: 0;
+        @include like-icon-color;
+        font-weight: bold;
       }
     }
   }
@@ -79,15 +95,16 @@
   .starters {
     animation: translateMenu 2s ease-in-out forwards;
   }
-  .mains{
+  .mains {
     animation: translateMenu 2s 0.3s ease-in-out forwards;
   }
-  .deserts{
+  .deserts {
     animation: translateMenu 2s 0.6s ease-in-out forwards;
   }
   .starters,
   .mains,
   .deserts {
+    opacity: 0;
     @include desktop-only {
       display: flex;
       flex-direction: column;
