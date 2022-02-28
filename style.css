@@ -577,6 +577,9 @@ a {
   transition: transform 0.6s ease-in-out;
   transform: translateX(-50px);
 }
+.main__menu--choice:hover .main__menu--text p {
+  width: 77%;
+}
 .main__menu--text {
   overflow: hidden;
   white-space: nowrap;
@@ -589,7 +592,6 @@ a {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 100%;
 }
 .main__menu--text h3 {
   font-weight: 18px;
@@ -597,6 +599,8 @@ a {
 }
 .main__menu--text p {
   font-weight: 14px;
+  width: 100%;
+  transition: width 0.6s ease-in-out;
 }
 .main__menu .button__menu {
   display: flex;
