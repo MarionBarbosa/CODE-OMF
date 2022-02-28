@@ -48,7 +48,6 @@
     @include desktop-only {
       display: flex;
       flex-direction: row;
-      align-items: center;
       column-gap: 10px;
     }
   }
@@ -99,7 +98,7 @@
     animation: translateMenu 1s 0.3s ease-in-out forwards;
   }
   .deserts {
-    animation: translateMenu 1s 0.8s ease-in-out forwards;
+    animation: translateMenu 1s 0.5s ease-in-out forwards;
   }
   .starters,
   .mains,
@@ -143,7 +142,7 @@
       height: 70px;
       width: 23%;
       margin-left: 3%;
-      transform: translateX(150px);
+      transform: translateX(180px);
       background-color: $color-tertiary;
       i {
         color: white;
@@ -169,7 +168,7 @@
     @include textEllipsis;
     width: 100%;
     margin-bottom: 10px;
-    
+
     h3,
     p {
       @include textEllipsis;

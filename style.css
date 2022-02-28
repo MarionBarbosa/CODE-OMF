@@ -465,7 +465,6 @@ a {
   .main__menu--list {
     display: flex;
     flex-direction: row;
-    align-items: center;
     column-gap: 10px;
   }
 }
@@ -512,7 +511,7 @@ a {
   animation: translateMenu 1s 0.3s ease-in-out forwards;
 }
 .main__menu .deserts {
-  animation: translateMenu 1s 0.8s ease-in-out forwards;
+  animation: translateMenu 1s 0.5s ease-in-out forwards;
 }
 .main__menu .starters,
 .main__menu .mains,
@@ -560,7 +559,7 @@ a {
   height: 70px;
   width: 23%;
   margin-left: 3%;
-  transform: translateX(150px);
+  transform: translateX(180px);
   background-color: #99e2d0;
 }
 .main__menu--choice .rotating-icon i {
