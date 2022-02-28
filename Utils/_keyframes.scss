@@ -1,42 +1,49 @@
 @keyframes loadingPage {
   0% {
     opacity: 1;
+    z-index: 2;
   }
   99% {
     opacity: 1;
+    z-index: 2;
   }
   100% {
-    opacity: 0;
-    z-index: -1;
+   
   }
 }
 @keyframes loadingSpinner {
-  0% {
+  1% {
     transform: rotate(720deg);
+    color: $color-primary;
   }
+  50% {
+    color: $color-secondary;
+  }
+
   90% {
     transform: rotate(0);
+    @include like-icon-color;
   }
   100% {
     transform: rotate(0);
+    @include like-icon-color;
   }
 }
 @keyframes likeIcon {
   0% {
     transform: scale(0);
-    opacity: 1;    
+    opacity: 1;
   }
 
   100% {
     transform: scale(1);
     opacity: 1;
-    
   }
 }
 
 @keyframes translateMenu {
   0% {
-    transform: translateY(20%);
+    transform: translateY(10%);
     opacity: 0;
   }
   50% {

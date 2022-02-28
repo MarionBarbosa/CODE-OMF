@@ -1,24 +1,32 @@
 @keyframes loadingPage {
   0% {
     opacity: 1;
+    z-index: 2;
   }
   99% {
     opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
+    z-index: 2;
   }
 }
 @keyframes loadingSpinner {
-  0% {
+  1% {
     transform: rotate(720deg);
+    color: #9356dc;
+  }
+  50% {
+    color: #ff79da;
   }
   90% {
     transform: rotate(0);
+    background-image: linear-gradient(to bottom left, #9356dc, #ff79da);
+    background-clip: text;
+    color: transparent;
   }
   100% {
     transform: rotate(0);
+    background-image: linear-gradient(to bottom left, #9356dc, #ff79da);
+    background-clip: text;
+    color: transparent;
   }
 }
 @keyframes likeIcon {
@@ -33,7 +41,7 @@
 }
 @keyframes translateMenu {
   0% {
-    transform: translateY(20%);
+    transform: translateY(10%);
     opacity: 0;
   }
   50% {
@@ -94,18 +102,17 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  inset: 0;
   height: 100vh;
   width: 100%;
   background-color: #f6f6f6;
-  opacity: 1;
-  z-index: 2;
+  opacity: 0;
+  z-index: -1;
   animation: loadingPage 4s linear forwards;
 }
 .loader p {
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", sans-serif;
   font-size: 40px;
   color: black;
   animation: loadingSpinner 3.8s ease-out forwards;
@@ -423,6 +430,8 @@ a {
 }
 .main__menu .heading {
   display: flex;
+  position: relative;
+  justify-content: space-between;
   align-items: baseline;
 }
 @media screen and (min-width: 992px) {
@@ -430,9 +439,6 @@ a {
     justify-content: center;
     column-gap: 50px;
   }
-}
-.main__menu .heading .like-icon {
-  position: relative;
 }
 .main__menu .heading .like-icon:hover .like-icon--basic {
   background-image: linear-gradient(to bottom left, #9356dc, #ff79da);
@@ -445,8 +451,8 @@ a {
 .main__menu .heading .like-icon--basic, .main__menu .heading .like-icon--slide {
   position: absolute;
   font-size: 25px;
-  left: 185px;
-  top: -20px;
+  bottom: 10px;
+  right: 30px;
 }
 .main__menu .heading .like-icon--slide {
   opacity: 0;
@@ -500,13 +506,13 @@ a {
   color: #353535;
 }
 .main__menu .starters {
-  animation: translateMenu 2s ease-in-out forwards;
+  animation: translateMenu 1s ease-in-out forwards;
 }
 .main__menu .mains {
-  animation: translateMenu 2s 0.3s ease-in-out forwards;
+  animation: translateMenu 1s 0.3s ease-in-out forwards;
 }
 .main__menu .deserts {
-  animation: translateMenu 2s 0.6s ease-in-out forwards;
+  animation: translateMenu 1s 0.8s ease-in-out forwards;
 }
 .main__menu .starters,
 .main__menu .mains,
@@ -524,9 +530,10 @@ a {
 }
 .main__menu--choice {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-end;
   height: 70px;
+  width: 100%;
   background-color: white;
   box-shadow: 5px 5px 8px #d5d5d5;
   border-radius: 20px;
@@ -543,16 +550,17 @@ a {
 .main__menu--choice .price {
   margin-bottom: 10px;
   margin-right: -50px;
-  transform: translateX(0);
+  justify-self: flex-end;
 }
 .main__menu--choice .rotating-icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-self: flex-end;
   height: 70px;
   width: 23%;
-  margin-left: 2%;
-  transform: translateX(100px);
+  margin-left: 3%;
+  transform: translateX(150px);
   background-color: #99e2d0;
 }
 .main__menu--choice .rotating-icon i {
@@ -563,7 +571,7 @@ a {
   transition: transform 0.6s ease-in-out;
 }
 .main__menu--choice:hover .rotating-icon i {
-  animation: rotateIcon 1s linear forwards;
+  animation: rotateIcon 0.5s 0.3s linear forwards;
 }
 .main__menu--choice:hover .price {
   transition: transform 0.6s ease-in-out;
@@ -581,6 +589,7 @@ a {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  width: 100%;
 }
 .main__menu--text h3 {
   font-weight: 18px;

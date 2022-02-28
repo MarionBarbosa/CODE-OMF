@@ -2,19 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  inset: 0;
   height: 100vh;
   width: 100%;
   background-color: $color-background;
-  opacity: 1;
-  z-index: 2;
+  opacity: 0;
+  z-index: -1;
+
   animation: loadingPage 4s linear forwards;
   p {
-    font-family: "Shrikhand";
+    font-family: "Shrikhand", sans-serif;
     font-size: 40px;
     color: black;
+
     animation: loadingSpinner 3.8s ease-out forwards;
   }
 }

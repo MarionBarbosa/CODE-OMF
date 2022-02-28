@@ -13,14 +13,14 @@
   }
   .heading {
     display: flex;
-
+    position: relative;
+    justify-content: space-between;
     align-items: baseline;
     @include desktop-only {
       justify-content: center;
       column-gap: 50px;
     }
     .like-icon {
-      position: relative;
       &:hover {
         .like-icon--basic {
           @include like-icon-color;
@@ -33,8 +33,9 @@
       &--slide {
         position: absolute;
         font-size: 25px;
-        left: 185px;
-        top: -20px;
+        bottom: 10px;
+        right: 30px;
+
       }
 
       &--slide {
@@ -93,13 +94,13 @@
     color: $color-header-location-text;
   }
   .starters {
-    animation: translateMenu 2s ease-in-out forwards;
+    animation: translateMenu 1s ease-in-out forwards;
   }
   .mains {
-    animation: translateMenu 2s 0.3s ease-in-out forwards;
+    animation: translateMenu 1s 0.3s ease-in-out forwards;
   }
   .deserts {
-    animation: translateMenu 2s 0.6s ease-in-out forwards;
+    animation: translateMenu 1s 0.8s ease-in-out forwards;
   }
   .starters,
   .mains,
@@ -113,9 +114,10 @@
   }
   &--choice {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-end;
     height: 70px;
+    width: 100%;
     background-color: white;
     @include button--box-shadow;
     border-radius: 20px;
@@ -132,16 +134,17 @@
     .price {
       margin-bottom: 10px;
       margin-right: -50px;
-      transform: translateX(0);
+      justify-self: flex-end;
     }
     .rotating-icon {
       display: flex;
       justify-content: center;
       align-items: center;
+      justify-self: flex-end;
       height: 70px;
       width: 23%;
-      margin-left: 2%;
-      transform: translateX(100px);
+      margin-left: 3%;
+      transform: translateX(150px);
       background-color: $color-tertiary;
       i {
         color: white;
@@ -151,7 +154,7 @@
       .rotating-icon {
         @include moveToLeft;
         i {
-          animation: rotateIcon 1s linear forwards;
+          animation: rotateIcon 0.5s 0.3s linear forwards;
         }
       }
       .price {
@@ -167,6 +170,7 @@
     h3,
     p {
       @include textEllipsis;
+      width: 100%;
     }
     h3 {
       font-weight: 18px;
