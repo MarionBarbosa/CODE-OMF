@@ -159,7 +159,7 @@
         transition: transform 0.6s ease-in-out;
         transform: translateX(-50px);
       }
-      .main__menu--text p {
+      .main__menu--text p, .main__menu--text h3{
         width: calc(100% - 23%);
       }
     }
@@ -172,14 +172,15 @@
     h3,
     p {
       @include textEllipsis;
+      width: 100%;
     }
     h3 {
       font-size: 18px;
       margin-bottom: 5px;
+      transition: width 0.6s ease-in-out;
     }
     p {
       font-size: 14px;
-      width: 100%;
       transition: width 0.6s ease-in-out;
     }
   }

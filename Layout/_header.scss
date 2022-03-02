@@ -12,7 +12,7 @@
     box-shadow: inset 0px 3px 2px $color-header-location-border;
 
     &--input {
-      border: none;
+      border: 2px solid transparent;
       background-color: $color-header;
       font-size: 15px;
       font-weight: bold;
@@ -23,6 +23,10 @@
     }
     input:focus::placeholder {
       color: transparent;
+    }
+    input:focus {
+      border: 2px solid black;
+      border-radius: 3px;
     }
   }
 }
